@@ -1,4 +1,3 @@
-import React from "react";
 import HeroJpg from "../assets/images/hero.jpg";
 
 const Hero = () => {

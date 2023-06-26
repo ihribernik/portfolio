@@ -2,23 +2,26 @@ import React from "react";
 import { FormInput } from "./FormInput";
 
 const Contact = () => {
-  const handleOnClick = (e) => {
+  const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const mailTo = document.getElementById("email");
-    const name = document.getElementById("name");
-    const message = document.getElementById("message");
-    const mailToValue = new XMLSerializer().serializeToString(
-      document.createTextNode(mailTo.value)
-    );
-    const nameValue = new XMLSerializer().serializeToString(
-      document.createTextNode(name.value)
-    );
-    const messageValue = new XMLSerializer().serializeToString(
-      document.createTextNode(message.value)
-    );
-
-    const newLocation = `mailto:${mailToValue}?subject=${nameValue}&body=${messageValue}`;
-    window.open(newLocation);
+    const mailTo = document.getElementById("email") as HTMLInputElement | null;
+    const name = document.getElementById("name") as HTMLInputElement | null;
+    const message = document.getElementById(
+      "message"
+    ) as HTMLInputElement | null;
+    if (mailTo != null && name != null && message != null) {
+      const mailToValue = new XMLSerializer().serializeToString(
+        document.createTextNode(mailTo.value)
+      );
+      const nameValue = new XMLSerializer().serializeToString(
+        document.createTextNode(name.value)
+      );
+      const messageValue = new XMLSerializer().serializeToString(
+        document.createTextNode(message.value)
+      );
+      const newLocation = `mailto:${mailToValue}?subject=${nameValue}&body=${messageValue}`;
+      window.open(newLocation);
+    }
   };
 
   return (
@@ -43,8 +46,8 @@ const Contact = () => {
                 className="form-textarea"
                 name="message"
                 id="message"
-                cols="30"
-                rows="10"
+                cols={30}
+                rows={10}
               ></textarea>
             </div>
             <button

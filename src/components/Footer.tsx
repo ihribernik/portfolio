@@ -1,9 +1,8 @@
-import React from "react";
-import * as Github from "../assets/svg/github.svg";
-import * as Linkedin from "../assets/svg/linkedin.svg";
-import * as Twitter from "../assets/svg/twitter.svg";
-import * as Instagram from "../assets/svg/instagram.svg";
-import * as Facebook from "../assets/svg/facebook.svg";
+import Facebook from "../assets/svg/facebook.svg";
+import Github from "../assets/svg/github.svg";
+import Instagram from "../assets/svg/instagram.svg";
+import Linkedin from "../assets/svg/linkedin.svg";
+import Twitter from "../assets/svg/twitter.svg";
 import Contact from "./Contact";
 import SocialButton from "./SocialButton";
 
@@ -22,28 +21,28 @@ const Footer = () => {
             href="https://www.facebook.com/ivan.hribernik"
             color="#1877f2"
           >
-            <Facebook className="w-4 h-4" />
+            <img src={Facebook} className="w-4 h-4" />
           </SocialButton>
           <SocialButton
             href="https://twitter.com/ivan_hribernik"
             color="#1da1f2"
           >
-            <Twitter className="w-4 h-4" />
+            <img src={Twitter} className="w-4 h-4" />
           </SocialButton>
           <SocialButton
             href="https://www.instagram.com/ivanhribernik89"
             color="#c13584"
           >
-            <Instagram className="w-4 h-4" />
+            <img src={Instagram} className="w-4 h-4" />
           </SocialButton>
           <SocialButton href="https://www.github.com/ihribernik" color="#333">
-            <Github className="w-4 h-4" />
+            <img src={Github} className="w-4 h-4" />
           </SocialButton>
           <SocialButton
             href="https://www.https://www.linkedin.com/in/claudio-ivan-hribernik-492255b8"
             color="#0077b5"
           >
-            <Linkedin className="w-4 h-4" />
+            <img src={Linkedin} className="w-4 h-4" />
           </SocialButton>
         </div>
       </div>

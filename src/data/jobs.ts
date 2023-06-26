@@ -1,9 +1,13 @@
 const MONTH_SECONDS = 2.628e6;
 
-function dateDiff(start: string, end: string = new Date().toISOString()) {
-  const month_diff =
-    (((new Date(start) - new Date(end)) / 1000) * -1) / MONTH_SECONDS;
-  return month_diff.toFixed(0);
+function dateDiff(start: string, end: string = new Date().toISOString()): number | undefined {
+  const start_date = new Date(start);
+  const end_date = new Date(end);
+  if (start_date != null || end_date != null) {
+    return undefined;
+  }
+  const month_diff = ((start_date - end_date / 1000) * -1) / MONTH_SECONDS;
+  return Number(month_diff.toFixed(0));
 }
 
 export default [
