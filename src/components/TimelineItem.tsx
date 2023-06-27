@@ -1,3 +1,17 @@
+const styles = {
+  timelineItem: "mb-10 ml-4",
+  timelineItemDot:
+    "absolute w-3 h-3 bg-yellow-700 rounded-full mt-1.5 border border-white -left-1.5",
+  timelineItemContent: "sm:flex items-center space-x-1",
+  timelineItemDuration: "rounded-md px-3 bg-yellow-500",
+  timelineItemDurationText: "text-base font-semibold",
+  timelineItemPosition: "text-base font-bold",
+  timelineItemDate: "text-sm",
+  timelineItemDetails: "",
+  timelineItemStack: "pt-3",
+  timelineItemStackTitle: "font-bold pr-2",
+  timelineItemStackContent: "text-yellow-600",
+};
 
 const TimelineItem = ({
   date,

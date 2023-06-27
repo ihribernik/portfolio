@@ -1,4 +1,6 @@
-
+const styles = {
+  portfolio: "flex pb-4",
+};
 const Portfolio = () => {
   return (
     <>

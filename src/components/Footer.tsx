@@ -1,19 +1,27 @@
-import Facebook from "../assets/svg/facebook.svg";
-import Github from "../assets/svg/github.svg";
-import Instagram from "../assets/svg/instagram.svg";
-import Linkedin from "../assets/svg/linkedin.svg";
-import Twitter from "../assets/svg/twitter.svg";
+import Facebook from "../assets/svg/Facebook";
+import Github from "../assets/svg/Github";
+import Instagram from "../assets/svg/Instagram";
+import Linkedin from "../assets/svg/Linkedin";
+import Twitter from "../assets/svg/Twitter";
 import Contact from "./Contact";
 import SocialButton from "./SocialButton";
+
+const styles = {
+  footer: "bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left",
+  footerBorder: "flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between",
+  footerBorderHidden: "mr-12 hidden lg:block",
+  footerBorderHiddenSpan: "mb-4 flex justify-center font-semibold uppercase md:justify-start",
+  socialSvg: "w-4 h-4",
+}
 
 const Footer = () => {
   const creationDate = new Date("2022-12-01").getFullYear();
   const currentDate = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
-      <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
-        <div className="mr-12 hidden lg:block">
+    <footer className={styles.footer}>
+      <div className={styles.footerBorder}>
+        <div className={styles.footerBorderHidden}>
           <span>Conéctate conmigo en las redes sociales:</span>
         </div>
         <div className=" lg:flex lg:justify-center">
@@ -21,28 +29,28 @@ const Footer = () => {
             href="https://www.facebook.com/ivan.hribernik"
             color="#1877f2"
           >
-            <img src={Facebook} className="w-4 h-4" />
+            <Facebook className={styles.socialSvg} />
           </SocialButton>
           <SocialButton
             href="https://twitter.com/ivan_hribernik"
             color="#1da1f2"
           >
-            <img src={Twitter} className="w-4 h-4" />
+            <Twitter className={styles.socialSvg} />
           </SocialButton>
           <SocialButton
             href="https://www.instagram.com/ivanhribernik89"
             color="#c13584"
           >
-            <img src={Instagram} className="w-4 h-4" />
+            <Instagram className={styles.socialSvg} />
           </SocialButton>
           <SocialButton href="https://www.github.com/ihribernik" color="#333">
-            <img src={Github} className="w-4 h-4" />
+            <Github className={styles.socialSvg} />
           </SocialButton>
           <SocialButton
             href="https://www.https://www.linkedin.com/in/claudio-ivan-hribernik-492255b8"
             color="#0077b5"
           >
-            <img src={Linkedin} className="w-4 h-4" />
+            <Linkedin className={styles.socialSvg} />
           </SocialButton>
         </div>
       </div>

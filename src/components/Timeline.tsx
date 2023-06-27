@@ -1,6 +1,12 @@
 import data from "../data/jobs";
 import TimelineItem from "./TimelineItem";
 
+const styles = {
+  timeline: "py-3",
+  timelineTitle: "text-3xl font-bold pb-4 underline",
+  timelineList: "flex flex-col relative border-l border-yellow-300",
+};
+
 const Timeline = () => {
   return (
     <div className="py-3">

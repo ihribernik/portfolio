@@ -1,5 +1,14 @@
 import HeroJpg from "../assets/images/hero.jpg";
 
+const styles = {
+  hero: "w-full bg-no-repeat bg-cover bg-center h-screen relative",
+  heroText:
+    "flex items-center text-center justify-center flex-col pt-20 pb-6 absolute inset-x-0 bottom-0 right-0 text-white",
+  heroTitle: "text-4xl md:text-7xl mb-1 font-bold mt-10",
+  heroTitleStrong: "text-yellow-500",
+  heroSubtitle: "text-base font-medium mb-4",
+};
+
 const Hero = () => {
   return (
     <section
