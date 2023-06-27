@@ -21,14 +21,19 @@ const TimelineItem = ({
         {duration && (
           <div className="rounded-md px-3 bg-yellow-500">
             <div className="text-base font-semibold">
-              {duration > 1 ? `${duration} meses` : "ahora"}
+              {duration > 1
+                ? `Antiguedad: ${duration} meses`
+                : "Recien ingresado"}
             </div>
           </div>
         )}
         <p className="text-base font-bold">
-          {position} en {employer}
+          {position} en {employer}.
         </p>
-        <p className="text-sm">{date}</p>
+
+        <p className="text-sm">
+          {duration && duration > 1 && `Ingreso: ${date}`}
+        </p>
       </div>
       <div>
         {details.map((detail, index) => (
