@@ -1,15 +1,6 @@
 import React from "react";
 import { FormInput } from "./FormInput";
 
-const styles = {
-  contact: "grid grid-cols-1 gap-20",
-  contactForm: "",
-  contactFormTitle:
-    "mb-4 flex justify-center font-semibold uppercase md:justify-start",
-  contactFormButton:
-    "my-4 px-4 py-2 font-semibold text-sm text-black rounded-lg shadow-sm bg-yellow-500 hover:bg-yellow-700",
-};
-
 const Contact = () => {
   const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();

@@ -1,7 +1,3 @@
-const styles = {
-  formInput: "border border-gray-300 p-2 rounded-md",
-};
-
 export function FormInput({
   type,
   name,
